@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JWT Detector</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="header">
+        <h1>JWT Detector</h1>
+        <label class="switch">
+            <input type="checkbox" id="toggleSwitch" />
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <!-- Status Message -->
+    <div id="status">Status: Inactive</div>
+
+    <!-- JWT Display Section -->
+    <div id="jwt-display">
+        <p id="jwt-algorithm"><strong>Algorithm:</strong> N/A</p>
+        <pre id="jwt-info">No JWT detected yet.</pre>
+        <button id="copy-btn" disabled>Copy JWT</button>
+        <div id="copy-message" class="hidden">JWT copied to clipboard!</div>
+    </div>
+
+    <script src="popup.js"></script>
+    <footer>
+        <p>Created by Oakshot</p>
+    </footer>
+</body>
+</html>

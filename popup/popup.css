@@ -1,0 +1,149 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    padding: 15px;
+    color: #FFA559; /* Soft orange for text */
+    background-color: #454545; /* Dark gray background */
+    width: 300px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 16px;
+    margin: 0;
+    color: #FF6000; /* Bright orange for header */
+}
+
+/* Custom Switch Styling */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FFA559; /* Soft orange for switch off state */
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #FF6000; /* Bright orange for switch on state */
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+#status {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #FFE6C7; /* Light beige for status text */
+}
+
+/* JWT Display Section */
+#jwt-display {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* JWT Info Styling */
+#jwt-info {
+    font-size: 12px;
+    background-color: #FF6000; /* Bright orange for JWT display area */
+    color: #FFE6C7; /* Light beige for JWT text */
+    padding: 10px;
+    border-radius: 4px;
+    max-height: 100px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Algorithm Display Styling */
+#jwt-algorithm {
+    font-size: 12px;
+    background-color: #FFA559; /* Soft orange for algorithm display */
+    color: #454545; /* Dark gray text for contrast */
+    padding: 8px;
+    margin-top: 8px;
+    border-radius: 4px;
+    word-wrap: break-word;
+    max-height: 50px;
+    overflow-y: auto;
+}
+
+/* Copy Button */
+#copy-btn {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #FFA559; /* Soft orange for button */
+    color: #454545; /* Dark gray for button text */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+#copy-btn:hover {
+    background-color: #FF6000; /* Bright orange on hover */
+}
+
+#copy-btn:disabled {
+    background-color: #454545; /* Dark gray for disabled button */
+    color: #999999; /* Lighter gray for disabled button text */
+    cursor: not-allowed;
+}
+
+/* Styling for the copy confirmation message */
+#copy-message {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #FFA559; /* Soft orange for message text */
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+#copy-message.show {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    font-size: 10px;
+    color: #FFE6C7;
+    text-align: center;
+    margin-top: 10px;
+}

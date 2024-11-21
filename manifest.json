@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "JWT Detector by Oakshot",
+  "version": "1.0",
+  "description": "Detects JWT tokens on a per-tab basis. Created by Olame A. Muliri.",
+  "author": "Olame A. Muliri",
+  "permissions": ["webRequest", "storage", "tabs", "<all_urls>"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/logo.png",
+      "48": "icons/logo.png",
+      "128": "icons/logo.png"
+    }
+  },
+  "icons": {
+    "16": "icons/logo.png",
+    "48": "icons/logo.png",
+    "128": "icons/logo.png"
+  }
+}
